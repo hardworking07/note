@@ -4,7 +4,7 @@
  * Mail  : yaolongyun2012@gmail.com
  * File  : strategy.cpp
  * Date  : 2015-12-29 07:10:03
- * Last modified: 2016-01-05 02:26:40
+ * Last modified: 2016-01-31 19:13:26
  *
  * Tag: 策略模式
  * Description: 如果采用简单工厂模式，每次新增一个策略，就要重新编绎工厂类，而策略模式就不用了。
@@ -19,12 +19,13 @@ namespace DP {
     {
         public:
             virtual string exe() = 0;
+            virtual ~Strategy() {}
     };
 
     class StrategyA: public Strategy
     {
         public:
-            virtual ~StrategyA() {}
+            ~StrategyA() {}
 
             virtual string exe()
             {
@@ -35,7 +36,7 @@ namespace DP {
     class StrategyB: public Strategy
     {
         public:
-            virtual ~StrategyB() {}
+            ~StrategyB() {}
 
             virtual string exe()
             {

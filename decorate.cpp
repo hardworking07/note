@@ -32,6 +32,8 @@ class Decorator: public Component
             if (pComponent_ != NULL)
                 pComponent_->operation();
         }
+
+        virtual ~Decorator() {}
 };
 
 class ConcreteDecoratorA: public Decorator
